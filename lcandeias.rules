@@ -1,0 +1,8 @@
+# Detección de ICMP hacia la red interna
+alert icmp any any -> $HOME_NET any (msg:"ICMP detectado: ping hacia lcandeias"; sid:1000001;)
+# Tráfico FTP hacia la red interna (puerto 21)
+alert tcp any any -> $HOME_NET 21 (msg:"FTP detectado: tráfico hacia puerto 21"; sid:1000002;)
+# Tráfico SSH hacia la red interna (puerto 22)
+alert tcp any any -> $HOME_NET 22 (msg:"SSH detectado: tráfico hacia puerto 22"; sid:1000003;)
+# Tráfico HTTP hacia la red interna (puerto 80)
+alert tcp any any -> $HOME_NET 80 (msg:"HTTP detectado: tráfico hacia puerto 80"; sid:1000004;)
